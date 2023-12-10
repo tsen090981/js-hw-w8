@@ -157,7 +157,7 @@ discardAllBtn.addEventListener('click', function(e){
 
 //送出訂單
 const orderInfoBtn = document.querySelector('.orderInfo-btn');
-
+const orderInfoForm = document.querySelector('.orderInfo-form');
 orderInfoBtn.addEventListener('click', function(e){
     e.preventDefault();
     if(cartData.length == 0){
@@ -186,6 +186,7 @@ orderInfoBtn.addEventListener('click', function(e){
     }).then(function(response){
         alert('訂單建立成功');
         getCartList();
+        orderInfoForm.reset();
     })
 })
 
